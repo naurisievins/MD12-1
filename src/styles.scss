@@ -6,11 +6,12 @@
   --slide-arrow-container-hover-color: rgba(255, 255, 255, 0.3);
   --slide-arrow-color: rgba(46, 45, 45, 0.5);
   --slide-arrow-hover-color: rgba(46, 45, 45, 1);
-  --dark-gray: rgb(44, 44, 44);
+  --light-gray: rgb(163, 160, 160);
+  --background: rgb(18 18 18);
 }
 
 body {
-  background-color: rgba(15, 52, 119, 0.267)
+  background-color: var(--background)
 }
 
 .divider {
@@ -34,7 +35,7 @@ body {
 .container__title {
  padding: 20px 0;
  font-size: 3rem;
- color: var(--dark-gray);
+ color: var(--light-gray);
  text-align:center;
 }
 
@@ -48,18 +49,26 @@ body {
 }
 
 .slideshow__image {
+  display: flex;
   transition: 0.4s;
   width: 100%;
   height: 100%;
+  border-radius: 10px;
   background-image: url(assets/images/sloth1.webp);
   background-repeat: no-repeat;
   background-size:cover;
+  &:hover .slideshow__full-screen{
+    opacity: 0.6;
+    width: 150px;
+    height: 150px;
+    transition: 0.5s;
+  }
 }
 
 .slideshow__arrow {
   display:flex;
   position: absolute;
-  height: 50%;
+  height: 55%;
   width: calc(5% + 20px);
   background-color: var(--slide-arrow-contaienr-color);
   align-self:center;
@@ -69,6 +78,7 @@ body {
   font-size: 5rem;
   color: var(--slide-arrow-color);
   &:hover {
+    transition: 0.5s;
     background-color: var(--slide-arrow-container-hover-color);
     color: var(--slide-arrow-hover-color);
   }
@@ -93,10 +103,10 @@ body {
 .circle {
   width:10px;
   height:10px;
-  border:2px solid var(--dark-gray);
+  border:2px solid var(--light-gray);
   border-radius:50%;
   &--full {
-    background-color:var(--dark-gray);
+    background-color:var(--light-gray);
   }
 }
 
@@ -118,4 +128,15 @@ body {
   &:hover {
     opacity: 0.6;
   }
+}
+
+.slideshow__full-screen {
+  background-image: url(assets/images/fs_ico.webp);
+  background-size:contain;
+  cursor: pointer;
+  opacity:0.0;
+  width: 20px;
+  height: 20px;
+  align-self: center;
+  margin: 0 auto;
 }
