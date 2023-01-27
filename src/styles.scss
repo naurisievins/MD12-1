@@ -53,7 +53,7 @@ body {
   height: 100%;
   background-image: url(assets/images/sloth1.webp);
   background-repeat: no-repeat;
-  background-size:cover
+  background-size:cover;
 }
 
 .slideshow__arrow {
@@ -104,11 +104,18 @@ body {
   width:100%;
   padding:10px 0;
   display: flex;
-  justify-content: space-evenly;
+  gap: 15px;
+  justify-content: center;
 }
 
 .thumb_container__image {
   width:100px;
   height: 75px;
-  border: 1px solid;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.6;
+  }
 }

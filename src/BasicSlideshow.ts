@@ -32,7 +32,7 @@ export default class BasicSlideshow {
       this.currentImage = this.imageSrc.length;
     }
     this.image.style.backgroundImage = `url(${this.imageSrc[this.currentImage - 1]})`;
-    this.currentImage -= 1;
+    this.currentImage -= 1;    
   }
 
   slideRight() {

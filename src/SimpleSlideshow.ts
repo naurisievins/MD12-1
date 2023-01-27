@@ -9,7 +9,7 @@ export default class SimpleSlideshow extends BasicSlideshow {
     super(selector);
 
     this.circlesContainer = this.rootElement.querySelector(".js-circles")
-    
+
     this.createCircles();
     this.markCircle();
     this.addSimpleListeners();
