@@ -40,7 +40,8 @@ body {
 }
 
 .container__slideshow {
-  display:flex;
+  display: flex;
+  overflow: hidden;
   align-items: center;
   position: relative;
   width: 800px;
@@ -101,8 +102,8 @@ body {
 }
 
 .circle {
-  width:10px;
-  height:10px;
+  width:13px;
+  height:13px;
   border:2px solid var(--light-gray);
   border-radius:50%;
   &--full {
