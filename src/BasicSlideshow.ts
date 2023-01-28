@@ -11,6 +11,26 @@ export default class BasicSlideshow {
     '/assets/images/sloth3.webp',
     '/assets/images/sloth4.webp',
     '/assets/images/sloth5.webp',
+    '/assets/images/sloth1.webp',
+    '/assets/images/sloth2.webp',
+    '/assets/images/sloth3.webp',
+    '/assets/images/sloth4.webp',
+    '/assets/images/sloth5.webp',
+    '/assets/images/sloth1.webp',
+    '/assets/images/sloth2.webp',
+    '/assets/images/sloth3.webp',
+    '/assets/images/sloth4.webp',
+    '/assets/images/sloth5.webp',
+    '/assets/images/sloth1.webp',
+    '/assets/images/sloth2.webp',
+    '/assets/images/sloth3.webp',
+    '/assets/images/sloth4.webp',
+    '/assets/images/sloth5.webp',
+    '/assets/images/sloth1.webp',
+    '/assets/images/sloth2.webp',
+    '/assets/images/sloth3.webp',
+    '/assets/images/sloth4.webp',
+    '/assets/images/sloth5.webp',
   ];
 
   constructor(selector: string) {
@@ -20,11 +40,16 @@ export default class BasicSlideshow {
     this.image = this.rootElement.querySelector('.js-image');
 
     this.addListeners();
+    this.showFirstImage();
   }
 
   addListeners() {
     this.leftArrow.addEventListener('click', () => { this.slideLeft(); });
     this.rightArrow.addEventListener('click', () => { this.slideRight(); });
+  }
+
+  showFirstImage() {
+    this.image.style.backgroundImage = `url(${this.imageSrc[this.currentImage]})`;
   }
 
   slideLeft() {

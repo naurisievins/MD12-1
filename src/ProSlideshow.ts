@@ -39,10 +39,8 @@ export default class ProSlideshow extends AdvancedSlideshow {
   handleFullscreen() {
     if (document.fullscreenElement) {
       this.fullscreenButton.style.display = 'none'
-      console.log('is full')
     } else {
         this.fullscreenButton.style.display = 'block'
-        console.log('exited full')
     }
   }
 
