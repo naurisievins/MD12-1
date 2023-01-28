@@ -2,7 +2,7 @@ import AdvancedSlideshow from "./AdvancedSlideshow";
 
 export default class ProSlideshow extends AdvancedSlideshow {
   fullscreenButton: HTMLDivElement;
-  slideInterval = 10000; // in miliseconds
+  slideInterval = 5000; // in miliseconds
   toClearInterval: NodeJS.Timer;
   
   constructor(selector: string) {

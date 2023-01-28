@@ -12,12 +12,6 @@ export default class SimpleSlideshow extends BasicSlideshow {
 
     this.createCircles();
     this.markCircle();
-    this.addSimpleListeners();
-  }
-
-  addSimpleListeners() {
-    this.leftArrow.addEventListener('click', () => { this.markCircle(); });
-    this.rightArrow.addEventListener('click', () => { this.markCircle(); });
   }
 
   createCircles() {
@@ -26,6 +20,16 @@ export default class SimpleSlideshow extends BasicSlideshow {
       this.circle.classList.add('circle');
       this.circlesContainer.appendChild(this.circle);
     }
+  }
+
+  slideLeft() {
+    super.slideLeft();
+    this.markCircle();
+  }
+
+  slideRight() {
+    super.slideRight();
+    this.markCircle();
   }
 
   markCircle() {
